@@ -7,7 +7,6 @@ const Test: NextPage = () => {
   const [isConnected, setConnected] = useState(false);
   const handleClick = async () => {
     setLoading(true);
-    console.log('api_url: ' + process.env.NEXT_PUBLIC_API_URL);
     if (!process.env.NEXT_PUBLIC_API_URL) {
       setConnected(false);
       setLoading(false);
