@@ -1,12 +1,19 @@
-import { Box, Text } from '@chakra-ui/react'
-import type { NextPage } from 'next'
+import { Flex, Heading } from '@chakra-ui/react';
+import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <Box>
-      <Text>Hello, world!</Text>
-    </Box>
-  )
-}
+    <Flex
+      w="90%"
+      h="100vh"
+      align="center"
+      direction="column"
+      justify="center"
+      mx="auto"
+    >
+      <Heading>Stady</Heading>
+    </Flex>
+  );
+};
 
-export default Home
+export default Home;
