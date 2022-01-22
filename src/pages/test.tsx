@@ -2,7 +2,7 @@ import { Box, Button, Flex, Heading, Link, Text } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { useState } from 'react';
 
-const test: NextPage = () => {
+const Test: NextPage = () => {
   const [isLoading, setLoading] = useState(false);
   const [isConnected, setConnected] = useState(false);
   const handleClick = async () => {
@@ -54,4 +54,4 @@ const test: NextPage = () => {
   );
 };
 
-export default test;
+export default Test;
