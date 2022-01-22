@@ -7,7 +7,12 @@ const Test: NextPage = () => {
   const [isConnected, setConnected] = useState(false);
   const handleClick = async () => {
     setLoading(true);
-    await fetch(String(process.env.NEXT_PUBLIC_API_URL), {
+    if (!process.env.NEXT_PUBLIC_API_URL) {
+      setConnected(false);
+      setLoading(false);
+      return;
+    }
+    await fetch(process.env.NEXT_PUBLIC_API_URL, {
       method: 'GET',
       mode: 'cors',
     })
@@ -29,7 +34,9 @@ const Test: NextPage = () => {
       justify="center"
       mx="auto"
     >
-      <Heading as="h1" m="50px">API Connection Test</Heading>
+      <Heading as="h1" m="50px">
+        API Connection Test
+      </Heading>
       <Button
         p="10px"
         isDisabled={isLoading}
